@@ -93,5 +93,24 @@ main {
    	  writeln("g = " + model.g);
    	  writeln("f/g = " + model.f / model.g);
   	}
+  	
+  	writeln("\n\n\n");
+  	for (var i=1; i<=model.m; i++) {  	
+  		write("\\hline ");
+  		for (var j=1; j<=model.n-1; j++) {  				
+  			if (model.x[i][j] == 1) {
+  				write("\\cellcolor{black} & ");  			
+  			} else {
+  				write(" & ");  			
+  			}
+  		}
+  		if (model.x[i][model.n] == 1) {
+  			write("\\cellcolor{black} \\\\");  		
+  		} else {
+  			write(" \\\\");  		
+  		}
+  		write("\n");
+  	}
+  	write("\\hline\n");
 }
  
